@@ -1,0 +1,161 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+}
+.square{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    margin-top: -250px;
+    left: 50%;
+    margin-left: -250px;
+    box-sizing: border-box;
+    background: black;
+    border: 7px solid black;
+}
+
+.littleSquare{
+    float: left;
+    width: 33.33%;
+    background: black;
+    height: 33.33%;
+    color: white;
+    font-size: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hor{
+    width: 99.9%;
+    height: 3px;
+    position: absolute;
+    background: yellow;
+}
+.hor1{ top: 33.4%;}
+.hor2{ top: 66.80%;}
+
+.vir{
+    width: 3px;
+    height: 99.99%;
+    position: absolute; 
+    background: yellow;
+}
+.vir1{ left: 33.3%;}
+.vir2{ left: 66.6%;}
+
+.x{}
+.x::after{
+    content: 'x';
+}
+.o{}
+.o::after{
+    content: 'o';
+}
+
+.greyline1{
+    display: none;
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    border: 2px dotted cornflowerblue;
+}
+.g-one{
+    top: 17.2%;
+}
+.g-two{
+    top: 50.8%;
+}
+.g-three{
+    top: 84.3%
+}
+.greyline2{
+    display: none;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    border: 2px dotted cornflowerblue;
+}
+.v-one{left: 16.5%}
+.v-two{left: 49.8%}
+.v-three{left: 83.0%}
+
+.inclined{
+    display: none;
+    width: 120%;
+    border: 2px dotted cornflowerblue;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: -10.5%;
+}
+.inclined2{
+      display: none;  
+    width: 120%;
+    border: 2px dotted cornflowerblue;
+    transform: rotate(135deg);
+    position: absolute;
+    top: 50%;
+    right: -10.5%;
+}
+.squareWrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.bg{
+    background: black;
+    opacity: 0.9;
+    width:100%;
+    height: 663px;
+    position: absolute;
+    z-index: 10;
+}
+.dialog{
+    width: 40%;
+    height: 150px;
+    background: burlywood;
+    position: absolute;
+    opacity: 1;
+    top: 40%;
+    margin-top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    border: 3px solid white;
+}
+.dialog p{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.XO{
+    text-align: right;
+    font-size: 28px;
+    padding-right: 40px;
+}
+.XO .selectX{
+    display: inline-block;
+    width: 45px;height: 45px;
+    border: 2px solid black;
+    text-align: center;
+    
+}
+.XO .selectO{
+    display: inline-block;
+    width: 45px;height: 45px;
+    border: 2px solid black;
+    text-align: center;
+}
+.selectX:hover{
+    background: white;
+}
+.selectO:hover{
+    background: yellow;
+}
