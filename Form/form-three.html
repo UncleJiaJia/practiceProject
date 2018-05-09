@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="form-three.css">
+    <title>表单联动</title>
+</head>
+<body>
+    <!--在页面中完成两个单选框，切换单选框的不同选项时下方显示的表单随之切换。
+当选择在校生时，出现两个select下拉菜单，一个选择城市，一个选择学校，当选择非在校生时，出一个文本输入框
+学校下拉菜单里的学校名单均为城市下拉菜单中所选的城市中的大学，当城市发生变化时，学校一起发生变化
+城市及学校的数据随意编造即可，无需真实完整  -->
+
+        <form name="form3">
+            <div class="radioWrap">
+                <div class="cm">
+                    <input type="radio" name="isInSchool" value="在校生" id="inSchool" checked>
+                    <label for="inSchool">在校生</label>
+                </div>
+                <div class="cm">
+                    <input type="radio" name="isInSchool" value="非在校生" id="notInSchool">
+                    <label for="notInSchool">非在校生</label>
+                </div>
+                <div class="inSchool" id="intext">
+                    <label for="area">学校</label>
+                    <select id="area">
+                        <!-- <option value=""></option> -->
+                    </select>
+                    <select id="school">
+                        <!-- <option value=""></option> -->
+                    </select>
+                </div>
+                <div class="outschool" id="outtext">
+                    <label for="workPlace">单位</label>
+                    <input type="text" id="wordPlace">
+                </div>
+            </div>
+        </form>
+
+        
+        <script src="form-three.js"></script>
+</body>
+</html>

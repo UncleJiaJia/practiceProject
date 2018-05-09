@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单中级</title>
+    <link rel="stylesheet" type="text/css" href="form-two.css">
+</head>
+<body>
+    
+    <form name="forms" id="F">
+        <div class="inputWrap">
+            <label for="userName">名称</label>
+            <input type="text" name="userName" id="userName" required>
+             <p>必填，长度为4~16个字符</p> 
+        </div>
+        <!-- <label for="">名称</label>
+        <input type="text" name="name"> -->
+        <div class="inputWrap">
+            <label for="passWord">密码</label>
+            <input type="password" name="psw" id="passWord" required>
+             <p>请输入密码</p> 
+        </div>
+        <div class="inputWrap">
+            <label for="checkpsd">密码确认</label>
+            <input type="password" name="rpsw" id="checkpsd" required>
+             <p>请再次输入密码</p> 
+        </div>
+        <div class="inputWrap">
+            <label for="email">邮箱</label>
+            <input type="email" name="mail" id="mail" required>
+             <p>请输入邮箱地址</p> 
+        </div>
+        <div class="inputWrap">
+            <label for="tphone">手机号码</label>
+            <input type="text" name="phoneNum" id="tphone" required>
+             <p>请输入手机号码</p> 
+        </div>
+        <button type="submit">提交</button>
+    </form>
+    <script src="form-two.js"></script>
+</body>
+</html>

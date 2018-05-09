@@ -1,0 +1,47 @@
+
+#F{
+    
+    text-align: right;
+    /* position: relative; */
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#F label{
+    vertical-align: middle;
+    font-size: 22px;
+
+}
+
+#F input{
+    width: 350px;
+    height: 40px;
+    border: 2px solid silver;
+    margin: 4px 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+#F input:focus{
+    border-color: rgb(98,173,238);
+}
+
+#F p{
+    display: none;
+    margin: 0px;
+    color: silver;
+}
+
+#F button{
+    width: 80px;
+    height: 40px;
+    background-color: rgb(47,121,186);
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-right: 5px;
+    font-size: 20px;
+    color: white;
+}
