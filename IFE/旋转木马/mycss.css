@@ -1,0 +1,35 @@
+.poster-main{
+    width: 800px;
+    height: 270px;
+    position: relative;
+    /* background-color: ; */
+}
+.list{
+    width: 800px;
+    height: 270px;
+    list-style: none;
+}
+.item{
+    position: absolute;
+    top: 0px;
+}
+.item a{
+    display: block;
+}
+.btn{
+    position: absolute;
+    top: 0;
+   
+    z-index: 10;
+    width: 100px;
+    height: 270px;
+    cursor: pointer;
+}
+.btn-left{
+    left: 0px;
+    background: url(btn_l.png) no-repeat center;
+}
+.btn-right{
+    right: 0px;
+    background: url(btn_r.png) no-repeat center;
+}

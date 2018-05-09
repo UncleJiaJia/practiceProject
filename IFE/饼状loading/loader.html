@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style> 
+        .loader{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .lo::after{
+            content: ' ';
+            position: absolute;
+            top: 11px;
+            left: 11px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .loader>span{
+            position: absolute;
+            display: inline-block;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #F2F2F2;
+        }
+        .loader .anim{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(113, 152, 223,0.5);
+            position: absolute;
+        }
+
+        .loader>.left>.anim{
+            transform-origin: 100% 50%;
+            animation: rou 2s linear infinite;
+        }  
+        .loader>.right{ 
+            left: 50%;  
+        }
+        .loader>.right>.anim{
+            transform-origin: 0 50%;
+            animation: rou 2s linear infinite;
+
+        }
+        @keyframes rou{
+            0%{transform: rotate(0deg)}
+            25%{transform: rotate(180deg)}
+            50%{transform: rotate(180deg)}
+            75%{transform: rotate(360deg)}
+            100%{transform: rotate(360deg)}
+        }
+        /* .lo2>.left>.anim{
+            animation: lo2_left 2s linear infinite;
+        } */
+ 
+        .lo2>.right>.anim{
+            animation: lo2_right 2s linear infinite;
+        }
+         @keyframes lo2_right{
+            0%{transform: rotate(0deg)}
+            25%{transform: rotate(0deg)}
+            50%{transform: rotate(180deg)}
+            75%{transform: rotate(180deg)}
+            100%{transform: rotate(360deg)}
+        } 
+    </style>
+</head>
+<body>
+
+    
+    <div class="loader lo2">
+        <span class="left"><span class="anim"></span></span>
+        <span class="right"><span class="anim"></span></span>
+    </div>
+</body>
+</html>

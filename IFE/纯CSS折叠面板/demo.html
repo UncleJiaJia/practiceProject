@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        label{
+            display: block;
+            width: 250px;
+            height: 50px;
+            border-radius: 5px;
+            border: 1px solid black;
+            background-color: #ddd;
+            text-align: center;
+            line-height: 50px;
+            margin-top: 5px;
+        }
+        input[type='radio']{
+            display: none;
+        }
+        input:checked ~div[class='content']{
+            display: block;
+        }
+        input:checked ~label{
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom: none;
+        }
+        .content{
+            width: 250px;
+            border: 1px solid black;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: white;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="floading_plate">
+        <input type="radio" name="plate" value="三少爷的剑" id='one'>
+        <label for="one">标题1</label>
+        <div class="content">1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum delectus beatae accusamus fugit consequuntur temporibus blanditiis quidem illum at harum id, voluptates perferendis tempore, veniam corporis, nesciunt distinctio magni ipsa.</div>
+    </div>
+    
+    <div class="floading_plate">
+        <input type="radio" name="plate" value="三少爷的剑" id="two">
+        <label for="two">标题2</label>
+        <div class="content"> 1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum delectus beatae accusamus fugit consequuntur temporibus blanditiis quidem illum at harum id, voluptates perferendis tempore, veniam corporis, nesciunt distinctio magni ipsa.</div>
+    </div>
+    
+    <div class="floading_plate">
+        <input type="radio" name="plate" value="三少爷的剑" id="three">
+        <label for="three">标题3</label>
+        <div class="content"> 1Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum delectus beatae accusamus fugit consequuntur temporibus blanditiis quidem illum at harum id, voluptates perferendis tempore, veniam corporis, nesciunt distinctio magni ipsa.</div>
+    </div>
+    </body>
+</html>

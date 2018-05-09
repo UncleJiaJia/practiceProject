@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        .container{
+            width: 100%;
+            height: 630px;
+            position: relative;
+            perspective: 2500px;
+            float: left;
+        }
+        .wrap{
+           transform-style: preserve-3d;
+           transform: rotateY(0deg);
+            animation: rou 16s linear infinite; 
+        }
+        @keyframes rou{
+            0%{
+                transform: rotateY(0deg);                
+            }
+            100%{
+                transform: rotateY(360deg);
+            }
+        }
+        img{
+            width: 320px;
+            height: 480px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -160px;
+            margin-top: 65px;
+            backface-visibility: visible;
+
+            animation: hou 5s linear infinite;
+        }
+        
+        img:nth-child(1){
+            transform: rotateY(0deg) translateZ(500px);
+        }
+        img:nth-child(2){
+            transform: rotateY(40deg) translateZ(550px);
+        }
+        img:nth-child(3){
+            transform: rotateY(80deg) translateZ(550px);
+        }
+        img:nth-child(4){
+            transform: rotateY(120deg) translateZ(550px);
+        }
+        img:nth-child(5){
+            transform: rotateY(160deg) translateZ(550px);
+        }
+        img:nth-child(6){
+            transform: rotateY(200deg) translateZ(550px);
+        }
+        img:nth-child(7){
+            transform: rotateY(240deg) translateZ(550px);
+        }
+        img:nth-child(8){
+            transform: rotateY(280deg) translateZ(550px);
+        }
+        img:nth-child(9){
+            transform: rotateY(320deg) translateZ(550px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="background:orange;">
+        <div class="wrap">
+            <img src="pic1.jpg" alt="敦刻尔克">
+            <img src="pic2.jpg" alt="嘉年华">
+            <img src="pic3.jpg" alt="星际穿越">
+            <img src="pic4.jpg" alt="大话西游之大圣娶亲">
+            <img src="pic5.jpg" alt="无法触碰">
+            <img src="pic6.jpg" alt="以你的名字呼唤我">
+            <img src="pic7.jpg" alt="楚门的世界">
+            <img src="pic8.jpg" alt="伯德小姐">
+            <img src="pic9.jpg" alt="泰坦尼克">
+        </div>
+    </div>
+    
+</body>
+</html>

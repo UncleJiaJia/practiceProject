@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图3D-js版本</title>
+    <style>
+         .container{
+            width: 100%;
+            height: 630px;
+            position: relative;
+             perspective: 2800px; 
+        }
+        #wrap{
+           transform-style: preserve-3d;
+           transition: all .5s ease-in-out; 
+        }
+        
+        img{
+            width: 200px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -160px;
+            margin-top: 65px;
+             backface-visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="wrap">
+            <img src="pic1.jpg" alt="敦刻尔克">
+            <img src="pic2.jpg" alt="嘉年华">
+            <img src="pic3.jpg" alt="星际穿越">
+            <img src="pic4.jpg" alt="大话西游之大圣娶亲">
+            <img src="pic5.jpg" alt="无法触碰">
+            <img src="pic6.jpg" alt="以你的名字呼唤我">
+            <img src="pic7.jpg" alt="楚门的世界">
+            <img src="pic8.jpg" alt="伯德小姐">
+            <img src="pic9.jpg" alt="泰坦尼克">
+            
+        </div>
+    </div>
+    <script src="car3d.js"></script>
+</body>
+</html>

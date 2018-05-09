@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义checkbox和radio</title>
+    <style>
+        .checkBox{
+            display: none;
+        }
+        .checkBox+label{
+            width: 18px;
+            height: 18px;
+            border: 1px solid silver;
+            display: flex;
+        }
+        .checkBox:checked+label{
+            border: 1px solid red;
+        }
+        .checkBox:checked+label::after{
+            margin: auto;
+            text-align: center;
+            width: 8px;
+            height: 8px;
+             line-height: 8px; 
+            content: '\2714';
+            color: red;
+            font-size: 12px;
+        }
+        .RD input{
+            display: none;
+        }
+        .RD span{
+            vertical-align: middle;
+        }
+        .RD .inlineWrap{
+             display: flex; 
+             margin: 10px auto;
+        }
+        .RD input+label{
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+             border: 1px solid silver; 
+            display: flex; 
+              /* position: relative;   */
+            /* top: 6px;  */
+        }
+        .RD input:checked+label{
+            border: 1px solid red;
+        }
+         .RD input:checked+label::after{
+            margin: auto; 
+            text-align: center;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: red;
+            line-height: 6px;  
+            content: ' ';
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="CB">
+            <input type="checkbox" value="" id="checkBox" class="checkBox">
+            <label for="checkBox"></label>
+        </div>
+
+        <div class="RD">
+            <!-- <span>男</span> -->
+            <div class="inlineWrap">
+                <input type="radio" name = 'sex' id="man" class="radioo" value="男">
+                <label for="man"></label>
+            </div>
+
+            <!-- <span>女</span> -->
+            <div class="inlineWrap">
+                <input type="radio" name = 'sex' id="woman" class="radiot" value="女">
+                <label for="woman"></label>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

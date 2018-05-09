@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js">
+</script>
+    <script src="myjs.js"></script>
+    <link type="text/css" rel="stylesheet" href="mycss.css">
+</head>
+<body>
+
+     <div class="J_poster poster-main" data-setting='{
+                    "width": 800,
+                    "height": 270,
+                    "posterWidth": 640,
+                   " posterHeight": 270,
+                    "verticalAlign": "bottom",
+                    "scale": 0.9,
+                    "speed": 500
+     }'>
+        <div class="btn-left btn"></div>
+        <ul class="list poster-list">
+            <li class="item"><a href="#"><img src="1.jpg" width="100%" alt=""></a></li>
+            <li class="item"><a href="#"><img src="2.jpg" width="100%" alt=""></a></li>
+            <li class="item"><a href="#"><img src="3.jpg" width="100%" alt=""></a></li>
+            <li class="item"><a href="#"><img src="4.jpg" width="100%" alt=""></a></li>
+            <li class="item"><a href="#"><img src="5.jpg" width="100%" alt=""></a></li>
+             <li class="item"><a href="#"><img src="2.jpg" width="100%" alt=""></a></li>
+            <li class="item"><a href="#"><img src="3.jpg" width="100%" alt=""></a></li>
+            <li class="item"><a href="#"><img src="4.jpg" width="100%" alt=""></a></li>
+            <li class="item"><a href="#"><img src="5.jpg" width="100%" alt=""></a></li>
+        </ul>
+        <div class="btn-right btn"></div>
+    </div>
+    <script>
+        $(function(){
+
+            Carousel.init($(".J_poster"));
+            
+        });
+    </script>
+</body>
+</html>
