@@ -1,0 +1,110 @@
+.clearFloat{}
+.clearFloat::after{
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    
+}
+body{
+    background: black;
+    opacity: 0.8;
+}
+.PCbody{
+    color: white;
+   
+}
+.PCbody h1{
+    text-align: center;
+}
+
+.leftcont{
+    float: left;
+    width: 50%;
+   
+}
+.leftcont>.part{
+    float: right;
+    width: 200px;
+    text-align: center;
+}
+
+.rightcont{
+    float: left;
+    width: 50%;
+    
+}
+.rightcont>.part{
+    float:left;
+    width: 200px;
+    text-align: center;
+}
+.main {
+    margin-top: 30px;
+    position: relative;
+   
+}
+.Clock{
+    width: 300px;
+    height: 300px;
+    border: 3px solid greenyellow;
+    margin: 0 auto;
+    position: relative;
+    bottom: 100%;
+    border-radius: 50%;
+    z-index: 3;
+}
+.wcircle{
+    position: absolute;
+    width: 294px;
+    height: 294px;
+    border: 3px solid black; 
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1; 
+}
+.circle{    
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 0%; /* 实心圆的高度。已过时间与总时间之比*/
+    background: green; /*任务时间为：红色； 休息时间为：绿色*/  
+    z-index: -1;
+}
+
+.Clock .tpart{
+    width: 100%;
+    height: 150px;
+    line-height: 170px;
+    text-align: center;
+    font-size: 48px;
+    position: absolute;
+    top: 0%;
+    z-index: 2;
+}
+.Clock .fpart{
+    width: 100%;
+    height: 150px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
+
+
+.test{
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 2em;
+      
+      background: transparent;
+}
+
+.fsize{
+    font-size: 32px;
+}

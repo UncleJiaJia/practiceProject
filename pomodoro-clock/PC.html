@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="PC.css">
+    
+    <title>Pomodoro Clock</title>
+</head>
+<body>
+    <div class="PCbody">
+        <h1>Pomodoro Clock</h1>
+        <div class="cont clearFloat">
+            <div class="leftcont">
+             <div class="part">
+                  <p>rest length</p>
+                  <button class="test" id="restMinus">-</button>
+                  <span class="fsize" id="restTime">5</span>
+                  <button class="test" id="restPlus">+</button>
+             </div>
+         </div>
+            <div class="rightcont">
+                <div class="part">
+                    <p>session length</p>
+                    <button class="test" id="seMinus">-</button>
+                    <span class="fsize" id="seTime">5</span>
+                    <button class="test" id="sePlus">+</button>
+                </div>  
+            </div>
+        </div>
+         
+        <div class="main">
+            <div class="Clock" id="clock">
+                    <div class="tpart" id="tpart">
+                    SESSION
+                    </div>
+                    <div class="fpart" id="clockTime">5</div>
+                    <div class="wcircle">
+                        <div class="circle" id="circle" style="height:0%;background-color:green;"></div>
+                    </div>
+                    
+            </div>
+        </div>
+    
+
+    </div>
+
+    <script src="PC.js"></script>
+</body>
+</html>

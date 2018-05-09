@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实心圆</title>
+    <style>
+        .circleBorder{
+            width: 350px;
+            height: 350px;
+            background: brown;
+            border: 5px solid blue;
+            position: relative;
+             z-index: 3; 
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .circle{
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            position: absolute;
+            border: 5px solid white;
+            
+            
+             z-index: 2; 
+        }
+        .circlebackground{
+            width: 100%;
+            background: yellow;
+            position: absolute;
+            bottom: 0%;
+            height: 100%;
+             z-index: 1; 
+        }
+        /*
+            一个外圆 一个内边框 一个填色
+        */
+    </style>
+</head>
+<body>
+    <div class="circleBorder">
+        <div class="circle">
+
+        </div>
+        <div class="circlebackground"></div>
+    </div>
+</body>
+</html>
