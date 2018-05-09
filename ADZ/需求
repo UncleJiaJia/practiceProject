@@ -1,0 +1,19 @@
+编写一个JS DOM动画类库
+要求能够实现简单的dom动画和链式调用
+满足
+1、Animation.animation({attr:value,...},{选项});
+参数一 接受一组CSS属性键值作为它的第一个参数。
+参数二 可选参数。为动画的额外配置项
+    duration ：400
+    easing：'缓动效果'
+
+2、动画方法
+    animation
+    fadeIn 淡入
+    fadeOut 淡出
+    start 动画控制
+    stop 动画暂停
+
+
+animation({width:300});
+// width height left right top bottom opacity 

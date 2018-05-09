@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #de{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: orange;
+             position: absolute; 
+            opacity: 1;  
+        }
+    </style>
+</head>
+<body>
+    <div id="de"></div>
+    <script src="ADZ.js"></script>   
+    <script>
+        var dom = document.getElementById('de');
+        var ani = new Animation(dom);
+        ani.add({
+            'top':500
+        },{
+            'duration':2000,
+            'easing':'BoundeaseOut'
+        }).repeat(5);
+        ani.start();
+    </script>
+</body>
+</html>
