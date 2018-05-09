@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #EEE9E9;
+}
+.wrap{
+    width: 80%;
+    margin: 0 auto;
+    background: #C1CDCD;
+    padding: 15px;
+}
+.theShow{
+    width: 100%;
+    background-color: #f06d06;
+    padding: 15px;
+    overflow: auto;
+}
+.left{
+    float: left;
+    width: 50%;
+    background-color: white;
+    padding: 15px;
+}
+.right{
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+nav {
+    text-align: center;
+    background: white;
+    margin: 20px 0;
+    padding: 10px;
+    }
+nav a {
+    text-decoration: none;
+    background: #333;
+    border-radius: 5px;
+    color: white;
+    padding: 3px 8px;
+}
+.hbc{
+    width: 160px;
+    background-color: black;
+    margin: 0 auto;
+    padding: 15px;
+    color: white;
+}
+.cd1{
+    text-align:center;
+    color:white;
+    background-color:black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.cd2{
+    text-align:center;
+    color:white;
+    background-color:black;
+    height: 60px;
+    line-height: 60px;
+}
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    height: 350px;
+    width: 100%;
+}
+.flex-center p{
+    color: white;
+    padding: 0 15px;
+}
+.bbw{
+    background: black;
+    height: 350px;
+    width: 100%;
+    position: relative;
+}
+.bbw .son{
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    margin-top: -50px;
+    width: 100px;
+    background-color: #f64dc2
+}
+
+.bbw .son1{
+    padding: 25px;
+    color: white;
+    background-color: #f64dc2;
+    width: 220px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.flex-vcenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
+    height: 350px;
+    width: 100%;
+}
+.flex-vcenter .son{
+    width: 150px;
+    height: 150px;
+    background: #f64dc2; 
+}
+
+.bbw .vc{
+    width: 150px;
+    height: 150px;
+    background: #f64dc2;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -75px;
+    left: 50%;
+    margin-left: -75px; 
+}
+
+.bbw .unknowHW{
+    padding: 20px;
+    background: #f64dc2;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.flex-unknow{
+     background: black;
+    height: 350px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-unknow .son{
+    padding: 20px;
+    background: #f64dc2;
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>各种垂直居中（水平/垂直）</title>
+    <link rel="stylesheet" type="text/css" href="各种居中.css">
+</head>
+<body>
+    <div class = 'wrap'>
+        <h2>水平居中</h2>
+        <h3>一、行内元素</h3>
+        <p>行内元素的居中，直接用 text-align：center</p>
+        <div class="theShow">
+            <div class="left">
+                <p style="text-align:center;color:white;background-color:black">hello</p>
+                <nav role='navigation'>
+                <a href="#0">One</a>
+                <a href="#0">Two</a>
+                <a href="#0">Three</a>
+                <a href="#0">Four</a>
+                </nav>
+            </div>
+            <div class="right">
+<pre rel="CSS"><code>p {
+    text-align: center;
+    ...
+}</code></pre>
+            </div>
+        </div>
+
+        <h3>二、块元素</h3>
+        <p>块级元素的水平居中，最简单的是设立margin值。margin：0 auto;</p>
+        <p>如果是多个块元素，可以用一个块级元素把这些块元素包起来，再在外层块元素用margin：0 auto;</p>
+        <div class="theShow">
+            <div class="left">
+                <div class="hbc">这是个有宽度的块级元素，这个元素要在父元素中水平居中</div>
+            </div>
+            <div class="right">
+<pre rel="CSS"><code>p {
+    margin: 0 auto;
+    width: 160px;
+    ...
+}</code></pre>
+            </div>
+        </div>
+
+        <h2>垂直居中</h2>
+        <h3>一、行内元素或行内块级元素</h3>
+        <h4>(1)单行</h4>
+        <p>单行的行内文本，想要垂直居中：</p>
+        <p>方法1：设置相同的padding-top 和 padding-bottom </p>
+        <div class="theShow">
+            <div class="left">
+                <p class="cd1">我想要垂直居中。我是单行的文字！</p>
+            </div>
+            <div class="right">
+<pre><code> p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    ...
+}</code>
+</pre>
+            </div>
+        </div>
+        <p>方法2：设置其行高和元素高度一样：height：50px; line-height:50px;</p>
+        <div class="theShow">
+            <div class="left">
+                <p class="cd2">我想要垂直居中。我是单行的文字！我用另一种常用方法</p>
+            </div>
+            <div class="right">
+<pre><code>p {
+    height: 60px;
+    line-height: 60px;
+    ...
+}</code></pre>
+            </div>
+        </div>
+        <h4>(2)多行</h4>
+        <p>个人觉得比较简单的方法就是用 flex 布局。因此这里不贴其他的方法！</p>
+        <div class="theShow">
+            <div class="left">
+                <div class="flex-center">
+                    <p>这段文字一定要长！为什么呢？因为父元素的宽度比较大，所以如果这一段文字比较短的话，只能占据
+                        父元素的一行。长了就不一样了！长后它才能折成几行，这样才能体现效果！
+                    </p>
+                </div>
+            </div>
+            <div class="right">
+<pre><code>.flex-center{ //这是那个大黑块
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+    ...
+}
+
+p {
+    color: white;
+    padding: 0 15px;   
+}</code></pre>
+            </div>
+        </div>
+
+        <h3>二、块级元素的垂直居中</h3>
+        <h4>(1) 知道块级元素的高度</h4>
+        <p>知道块级元素的高度，就比较好办：父元素设置position：relative</p>
+        <p>子元素设置position：abosolute; top：50%(已父元素为基准)，height：100px; margin-top:-50px;(这个-50是子元素的一半高度)</p>
+        <div class="theShow">
+            <div class="left">
+                <div class="bbw">
+                    <div class="son"></div>
+                </div>
+            </div>
+            <div class="right">
+<pre><code>.bbw{
+    position: relative;
+    ...
+}
+.bbw .son{
+    position: absolute;
+    top: 50%;
+    height: 100px;
+    margin-top: -50px;
+    ...
+}</code></pre>
+            </div>
+        </div>
+        <h4>(2)不知道块级元素的高度</h4>
+        <p>不知道高度的块级元素，其实垂直居中的思想也跟有高度的差不多，只不过需要用到另外一个属性</p>
+        <p>transform: transformY(-50%)!!用这个去代替margin-top：-xx px;</p>
+        <div class="theShow">
+            <div class="left">
+                <div class="bbw">
+                    <div class="son1">这个子元素没有设置高度，只设置了宽度和padding值</div>
+                </div>
+            </div>
+            <div class="right">
+<pre><code>.bbw{
+    position: relative;
+    ...
+}
+.bbw .son1{ //粉色那个
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    ...
+    //因为没有设置高度，这个元素的高度只能靠其子元素撑开，所以高度不确定
+}</code></pre>        
+            </div>
+        </div>
+        <h4>(3)用flex布局</h4>
+        <p>如果用flex布局的话，不用考虑知不知道高度的问题！</p>
+        <div class="theShow">
+            <div class="left">
+                <div class="flex-vcenter">
+                    <div class="son"></div>
+                </div>
+            </div>
+            <div class="right">
+<pre><code>.bbw{ //大黑块
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   ...
+}
+.bbw .son1{ //粉色那个
+    width: 150px;
+    height: 150px;
+    background: #f64dc2; 
+
+}</code></pre> 
+            </div>
+        </div>
+
+        <h2>水平垂直都居中</h2>
+        <h3>一、如果元素是固定高度和宽度</h3>
+        <p>父元素设置 position:relative;</p>
+        <p>子元素设置 position：absolute; top:50%; left:50%;</p>
+        <p>再根据高度和宽度： margin-top：-1/2 height; margin-left: -1/2 width;</p>
+        <div class="theShow">
+            <div class="left">
+                <div class="bbw">
+                    <div class="vc"></div>
+                </div>
+            </div>
+            <div class="right">
+<pre><code>.bbw{ //大黑块
+   position: absolute;
+   ...
+}
+.bbw .son1{ //粉色那个
+    width: 150px;
+    height: 150px;
+    background: #f64dc2;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -75px;
+    left: 50%;
+    margin-left: -75px;
+
+}</code></pre>                
+            </div>
+        </div>
+
+        <h3>二、如果不知道 高 宽</h3>
+        <p>前两步跟上面一样，就是最后一步有点不一样</p>
+        <p>margin-top 和 margin-left 换成 transform：translateY(-50%,-50%)</p>
+        <div class="theShow">
+            <div class="left">
+                <div class="bbw">
+                    <div class="unknowHW">这是一个不知道高和宽的小方块，高度宽度全由内容决定</div>
+                </div>
+            </div>
+            <div class="right">
+<pre><code>.bbw{ //大黑块
+   position: absolute;
+   ...
+}
+.bbw .unknowHW{ //粉色那个
+    padding: 20px;
+    background: #f64dc2;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}</code></pre> 
+            </div>
+        </div>
+
+        <h3>三、用flex</h3>
+        <p>如果会用flex，水平垂直居中很简单，如下：</p>
+        <div class="theShow">
+            <div class="left">
+                <div class="flex-unknow">
+                    <div class="son">用flex布局，就不用在乎知不知道这个元素的宽高了</div>
+                </div>
+            </div>
+            <div class="right">
+<pre><code>.flex-unknow{ //大黑块
+    background: black;
+    height: 350px;
+    width: 100%;
+
+    //主要是下面这三条 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bbw .unknowHW{ //粉色那个
+    padding: 20px;
+    background: #f64dc2;
+
+}</code></pre> 
+            </div>
+        </div>
+
+        <h3>四、用grid布局</h3>
+        <p>grid布局是啥！等会自己研究！</p>
+
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉菜单</title>
+    <style>
+        .main {
+            width: 160px;
+             display: block;
+            text-decoration: none;
+            text-align: center;
+            padding-top:12px;
+            padding-bottom: 12px;
+            color: blueviolet;
+        }
+        .mai{
+            width: 160px;
+        }
+
+        /* 这里需要注意的是：这个content必须包裹在mai里面！因为mai hover之后，content内容展开，你
+           鼠标移到dontent上 你的鼠标还是处在mai的范围内  */
+        .mai:hover .content {
+            display: block;
+        }
+        
+        .content{
+             display: none; 
+            width: 160px;
+            background-color: #f9f9f9;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .content a{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px 15px;
+            color: blueviolet;
+        }
+
+        .content a:hover{
+            background-color: forestgreen;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="mai">
+        <a href="" class="main">主菜单</a>
+         <div class = 'content'>
+        <a href="">子菜单一</a>
+        <a href="">子菜单二</a>
+        <a href="">子菜单三</a>
+        </div>
+    </div>
+</body>
+</html>
