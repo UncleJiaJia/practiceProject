@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="SimonGame.css">
+    <title>Simon Game</title>
+</head>
+<body>
+    <div class="circle">
+        <div class="set topleft" id="green"></div>
+        <div class="set topright" id="red"></div>
+        <div class="set bottomleft" id="yellow"></div>
+        <div class="set bottomright" id="blue"></div>
+        <div class="inCircle">
+            <div class="gameName">Simon <span>®</span></div>
+            <div class="showBtn">
+                 <div class="screen led-off" id="screen">- -</div>
+                <div class="cbtn start" id="start"></div>
+                <div class="cbtn sirict" id="sirict">
+                    <div class="yd yd-off" id="yd"></div>
+                </div>
+            </div>
+            <div class="ti">
+                <span class="count">COUNT</span>
+                <span>START</span>
+                <span>SIRICT</span>
+            </div>
+            <div class="on-off">
+                <span>off</span>
+                <div class="oo" id="oo">
+                    <div class="kg kg-left" id="onoff"></div>
+                </div>
+                <span>on</span>
+            </div>
+        </div>
+    </div>
+    <script src="SimonGame.js"></script>
+</body>
+</html>
